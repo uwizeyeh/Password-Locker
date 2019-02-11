@@ -29,7 +29,7 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("yvette","umutesiwase","umutesiwaseyvette","yvette") # create contact object
+        self.new_user = User("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde") # create contact object
 
 
     def test_init(self):
@@ -37,10 +37,10 @@ class TestUser(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_user.first_name,"yvette")
-        self.assertEqual(self.new_user.last_name,"umutesiwase")
-        self.assertEqual(self.new_user.user_name,"umutesiwaseyvette")
-        self.assertEqual(self.new_user.password,"yvette")
+        self.assertEqual(self.new_user.first_name,"Hulde")
+        self.assertEqual(self.new_user.last_name,"Uwizeyimana")
+        self.assertEqual(self.new_user.user_name,"huldeuwizeyimana@gmail.com")
+        self.assertEqual(self.new_user.password,"hulde")
 
 
 if __name__ == '__main__':
