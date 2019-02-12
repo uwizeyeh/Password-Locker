@@ -6,6 +6,10 @@ Uwizeyimana Hulde
 ## Description
 This is a python terminal application that allows a user to generate and store passwords for various accounts.
 
+## Contact details
+* Email:uwizeyimanahulde1@gmail.com
+* Tel:0782356570
+
 ## Setup/Installation Requirements
 To start using this project use the following commands:
 
@@ -60,10 +64,6 @@ The program should end when ex(exit program) is entered:
    * Input Example: Enter ex
 
    * Output Example: Thank you for using Password locker...
-
-## Contact details
-More information:uwizeyimanahulde1@gmail.com
-Tel:0782356570
 
 ## License
 MIT License
