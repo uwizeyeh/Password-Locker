@@ -47,20 +47,20 @@ def main():
     print(f"Hello {u_name}.what would you like to do?")
     while True:
         print("\nUse these short codes below:")
-        print("-" * 30)
+        print("-" * 20)
         print("\n ca - create an account, cc - create credentials, gp - generate password, cp - create own password, ex - exit password locker, dc - display credentials")
         short_code = input().lower()
 
         if short_code == 'ca':
             print("New account")
-            print("-" * 14)
+            print("-" * 10)
 
             print("\nEnter your user name")
-            print("-"*20)
+            print("-"*15)
             user_name = input()
 
             print("\nEnter a password")
-            print("-"*20)
+            print("-"*15)
             pass_word = input()
 
             save_user_account(create_user_account(user_name,pass_word))# create and save new account.
@@ -70,7 +70,7 @@ def main():
 
         elif short_code == "cc":
             print("\nLogin to your account")
-            print("-"*20)
+            print("-"*15)
             print("\nUsername?")
             print("-" * 10)
             username_input = input()
