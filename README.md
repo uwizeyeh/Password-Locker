@@ -1,12 +1,15 @@
+# Project
 Password Locker
-By Kayitesi Jackie
-Description
-This is a terminal based python program that helps users to manage their passwords and even generate new passwords for them.
+# Author
+Uwizeyimana Hulde
 
-Setup/Installation Requirements
+## Description
+This is a python terminal application that allows a user to generate and store passwords for various accounts.
+
+## Setup/Installation Requirements
 To start using this project use the following commands:
 
-git clone https://github.com/kayitesijackie/Password-Locker.git
+git clone https://github.com/uwizeyeh/Password-Locker
 cd Password-Locker
 To run this program
 
