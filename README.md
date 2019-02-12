@@ -3,8 +3,7 @@ Password Locker
 # Author
 Uwizeyimana Hulde
 
-## Description
-This is a python terminal application that allows a user to generate and store passwords for various accounts.
+
 
 ## Contact details
 * Email:uwizeyimanahulde1@gmail.com
