@@ -14,7 +14,7 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde") # create contact object
+        self.new_user = User("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde") # create user object
 
 
     def test_init(self):
@@ -30,21 +30,21 @@ class TestUser(unittest.TestCase):
 
     def test_save_user(self):
         '''
-        test_save_account test case to test if the account object is saved into
-         the account list
+        test_save_user test case to test if the user object is saved into
+         the user list
         '''
-        self.new_user.save_user() # saving the new account
+        self.new_user.save_user() # saving the new user
         self.assertEqual(len(User.user_list),1)
 
     # Items up here...
 
     def test_save_multiple_user(self):
             '''
-            test_save_multiple_account to check if we can save multiple account
-            objects to our account_list
+            test_save_multiple_user to check if we can save multiple user
+            objects to our user_list
             '''
             self.new_user.save_user()
-            test_user = User("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde") # new account
+            test_user = User("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde") # new user
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
 
@@ -58,13 +58,78 @@ class TestUser(unittest.TestCase):
     # other test cases here
     def test_save_multiple_user(self):
             '''
-            test_save_multiple_account to check if we can save multiple account
-            objects to our account_list
+            test_save_multiple_user to check if we can save multiple user
+            objects to our user_list
             '''
             self.new_user.save_user()
-            test_user = User("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde") # new account
+            test_user = User("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde") # new user
             test_user.save_user()
-            self.assertEqual(len(User.user_list),2)    
+            self.assertEqual(len(User.user_list),2) 
+def test_delete_user(self):
+            '''
+            test_delete_user to test if we can remove a user from our user list
+            '''
+            self.new_user.save_user()
+            test_user = User("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde") # new user
+            test_user.save_user()
+
+            self.new_user.delete_user()# Deleting a user object
+            self.assertEqual(len(User.user_list),1)
+
+
+    def test_find_user_by_user_name(self):
+        '''
+        test to check if we can find a user by user_name  and display information
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde") # new user
+        test_user.save_user()
+
+        found_user = User.find_by_user_name("huldeuwizeyimana@gmail.com")
+
+        self.assertEqual(found_user.user_name,test_user.user_name)
+
+    @classmethod
+    def find_by_user_name(cls,user_name):
+        '''
+        Method that takes in a user_name  and returns a user that matches that user_name.
+        Args:
+            user_name: user_name to search for
+        Returns :
+            user of person that matches the user_name.
+        '''
+
+        for user in cls.user_list:
+            if user.user_name == user_name:
+                return user
+    
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the user.
+        '''
+
+        self.new_user.save_user()
+        test_user = User() # new user
+        test_user.save_user("Hulde","Uwizeyimana","huldeuwizeyimana@gmail.com","hulde")
+
+        user_exists = User.user_exist("Hulde")
+
+        self.assertTrue(user_exists)
+
+    @classmethod
+    def user_exist(cls,user_name):
+        '''
+        Method that checks if a user exists from the user list.
+        Args:
+           user_name: user_name to search for
+            Boolean: True or false depending if the user exists
+        '''
+        for user in cls.user_list:
+            if user.user_name == user_name:
+                    return True
+
+        return False
 
 
 if __name__ == '__main__':
