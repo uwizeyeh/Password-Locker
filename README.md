@@ -1,4 +1,4 @@
-# Project
+# Project Name
 Password Locker
 # Author
 Uwizeyimana Hulde
