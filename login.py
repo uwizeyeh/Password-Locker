@@ -32,7 +32,7 @@ def check_existing_users(characters):
     """
     Function that checks if a user exists with those characters and retuen a boolean
     """
-    return User.user_exists(characters)
+    return User.user_exist(characters)
 
 def display_credentials():
      """
